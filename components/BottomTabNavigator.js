@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import RideScreen from "../screens/Ride";
-import RideHistoryScreen from "../screens/RideHistory";
+import TransactionScreen from "../screens/Transaction";
+import SearchScreen from "../screens/Search";
 
 const Tab = createBottomTabNavigator();
 
@@ -12,25 +12,8 @@ export default class BottomTabNavigator extends Component {
     return (
       <NavigationContainer>
         <Tab.Navigator>
-          {/*
-            <TabScreen name="Ride" component={RideScreen} />
-            <TabScreen name="Ride History" component={RideHistoryScreen} />
-          */}
-
-          {/* 
-            <Tab.Screen name="Ride" />
-            <Tab.Screen name="Ride History" />
-          */}
-
-          {/* 
-            <Screen name="Ride" component={RideScreen} />
-            <Screen name="Ride History" component={RideHistoryScreen} />
-          */}
-
-           {/*
-            <Tab.Screen name="Ride" component={RideScreen} />
-            <Tab.Screen name="Ride History" component={RideHistoryScreen} />
-           */}
+          <Tab.Screen name="Transaction" component={TransactionScreen} />
+          <Tab.Screen name="Search" component={SearchScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     );
